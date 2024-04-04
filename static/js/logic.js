@@ -32,7 +32,7 @@ function createMap(evStations) {
 function createMarkers(response) {
 
   // Pull the "stations" property from response.data.
-  let evChargers = response.NorthEastCoast;
+  let evChargers = response;
 
   // Initialize an array to hold bike markers.
   let evMarkers = [];
