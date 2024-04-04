@@ -56,6 +56,7 @@ function createMarkers(response) {
 
 // Perform an API call to the Citi Bike API to get the station information. Call createMarkers when it completes.
 // Load the GeoJSON data.
+// comment for alan
 
 url = "https://marinelloc.github.io/Proj_3/data/tristate_northeast.json"
 d3.json(url).then(createMarkers);
