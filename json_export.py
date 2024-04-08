@@ -20,7 +20,7 @@ conn = psycopg2.connect(
     password=password,
     port=port
 )
-query = 'SELECT * FROM "evChargers".tristate_northeast_v;'
+query = 'SELECT * FROM "evChargers".tristate_northeast_geoshape_v;'
 
 # Execute query and fetch results
 cur = conn.cursor()
