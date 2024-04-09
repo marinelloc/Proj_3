@@ -10,7 +10,7 @@ password = 'charger2024'
 port = '5432'
 
 # File path for JSON export
-JSON_FILE = Path("data/tristate_northeast.json")
+JSON_FILE = Path("data/evchargingstations.json")
 
 # Connect to PostgreSQL
 conn = psycopg2.connect(
@@ -20,7 +20,7 @@ conn = psycopg2.connect(
     password=password,
     port=port
 )
-query = 'SELECT * FROM "evChargers".tristate_northeast_geoshape_v;'
+query = 'SELECT * FROM "evChargers".evcharingstations_all;'
 
 # Execute query and fetch results
 cur = conn.cursor()
