@@ -9,7 +9,7 @@ function createMap(evStations) {
   
     const map = L.map("map-id", {
       center: [40.73, -74.0059],
-      zoom: 12,
+      zoom: 10,
       layers: [streetmap, evStations]
     });
   
