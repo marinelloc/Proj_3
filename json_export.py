@@ -20,7 +20,7 @@ conn = psycopg2.connect(
     password=password,
     port=port
 )
-query = 'SELECT * FROM "evChargers"."EV_Charging_Final";'
+query = 'SELECT * FROM "evChargers"."EV_Charging_Final_V2";'
 
 # Execute query and fetch results
 cur = conn.cursor()

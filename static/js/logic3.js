@@ -20,10 +20,11 @@ function createMap(evStations) {
   function createMarkers(evChargers) {
     const evMarkers = evChargers.map(charger => {
       const popupContent = `
-      <h3>Station Name: ${charger["station name"]}</h3>
-      <h3>State: ${charger.state}</h3>
+      <h3>Station Name: ${charger["station_name"]}</h3>
+      <h3>Address: ${charger.street_address}</h3>
       <h3>City: ${charger.city}</h3>
-      <h3>ZipCode: ${charger.zipcode}</h3>
+      <h3>State: ${charger.state}</h3>
+      <h3>ZipCode: ${charger.zip}</h3>
       <p>Latitude: ${charger.latitude}</p>
       <p>Longitude: ${charger.longitude}</p>
       `;
@@ -34,7 +35,7 @@ function createMap(evStations) {
   }
   
   // URL for GeoJSON data
-  const url = "https://marinelloc.github.io/Proj_3/data/evchargingstations.json";
+  const url = "https://marinelloc.github.io/Proj_3/data/tristatecharingstations.json";
   
   // Fetch GeoJSON data and create markers when it completes
   d3.json(url).then(createMarkers);  
