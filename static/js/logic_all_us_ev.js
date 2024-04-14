@@ -34,7 +34,7 @@ function createMap(evStations) {
   }
   
   // URL for GeoJSON data
-  const url = "https://marinelloc.github.io/Proj_3/data/tristate_northeast.json";
+  const url = "https://marinelloc.github.io/Proj_3/data/evchargingstations.json";
   
   // Fetch GeoJSON data and create markers when it completes
   d3.json(url).then(createMarkers);  
