@@ -1,13 +1,7 @@
 import json
 import psycopg2
 from pathlib import Path
-
-# PostgreSQL connection details
-host = 'evchargerdb.cjlsbfswobs8.us-east-1.rds.amazonaws.com'
-database = 'evchargerinst'
-user = 'postgres'
-password = 'charger2024'
-port = '5432'
+from postgresRDSConnect import host, database, user, password, port
 
 # File path for JSON export
 JSON_FILE = Path("data/tristatecharingstations.json")
@@ -20,7 +14,7 @@ conn = psycopg2.connect(
     password=password,
     port=port
 )
-query = 'SELECT * FROM "evChargers"."EV_Charging_Final_V2";'
+query = 'SELECT * FROM "evChargers"."EV_Charging_Tristate";'
 
 # Execute query and fetch results
 cur = conn.cursor()
